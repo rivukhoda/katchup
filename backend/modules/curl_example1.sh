@@ -11,4 +11,5 @@ do
 done
 
 rm ../temp/*
+rm ../audio/*
 

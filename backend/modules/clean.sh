@@ -1,6 +1,6 @@
 #!/bin/sh
 
-rm ../results/*
+rm -rf ../results/*
 rm ../temp/*
 rm ../uploads/*
 rm ../audio/*

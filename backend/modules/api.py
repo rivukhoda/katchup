@@ -48,14 +48,15 @@ def search_query():
 	response = []
 
 	for fname in os.listdir('../results/' + name + '/'):
-		print fname
 		FILE_PATH = '../results/' + name + '/' + fname
 		if os.path.isfile(FILE_PATH):
 			with open(FILE_PATH) as f:
 				for line in f:
-					print line
 					if keyword in line:
-						response.append(fname)
+						print fname
+						f.seek(0)
+						data = f.read()
+						response.append({'time':fname, 'string':data})
 
 	print response
 	return json.dumps(response)
