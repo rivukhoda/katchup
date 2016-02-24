@@ -1,0 +1,34 @@
+[
+ {
+   "title": "The Science of Dreams",
+   "author": "Michio Kaku",
+   "views": "1,937 views",
+   "date": "1 year ago",
+   "description": "Michio Kaku describes how our prefrontal cortex disengages as we dream, thus suppressing the fact-checking component of our consciousness. Dr. Kaku's latest book is The Future of the Mind: The Scientific Quest to Understand, Enhance, and Empower the Mind",
+   "hashtags": ["#ComputerScience", "#Neuroscience", "#Dreams"]
+ },
+ {
+   "title": "Lecture 2- COMP202",
+   "author": "McGill University",
+   "views": "1,026 views",
+   "date": "1 year ago",
+   "description": "…Learn how to acquire and analyze data from computers or storage devices with computer forensics.…",
+   "hashtags": ["#Loops", "#Trees", "#DataStructures"]
+ },
+ {
+   "title": "Lecture 4- COMP202",
+   "author": "McGill University",
+   "views": "572 views",
+   "date": "9 months ago",
+   "description": "…connect programming theory to practice. This series of training videos explains basic programming concepts such as functions, variables, and loops…",
+   "hashtags": ["#BinarySearchTrees", "Varaibles", "Arrays"]
+ },
+ {
+   "title": "Lecture 5- COMP202",
+   "author": "McGill University",
+   "views": "279 views",
+   "date": "1 month ago",
+   "description": "…connect programming theory to practice. This series of training videos explains basic programming concepts such as functions, variables, and loops…",
+   "hashtags": ["#HTML", "#WebDesign", "#CSS"]
+ }
+]

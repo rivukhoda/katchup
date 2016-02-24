@@ -2,11 +2,6 @@
 ..
 .DS_Store
 data/
-server/uploads/
-server/audio/
-server/temp/
-results/
 server/venv/
-client/
 *.pyc
 client/assets/video.mp4

@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html ng-app="Main">
+<head>
+	<title>KatchUP McHacks 2016</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/skel-viewport.min.js"></script>
+	<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
+</head>
+
+<body ng-controller="myCtrl" class="homepage">
+		
+			<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+				<a href="./index.html" id='logo3'><img src='./assets/logo-katchup.png' id='logo'/></a>
+				<span class="left"><li><a href="./uploadmenu.html">Upload</a></li></span>
+				
+					<li><a href="./videomenu.html">Discover</a></li>
+					<li><a href="#footer">About Us</a></li><span class='mainnav'>
+				</span>
+					<span class="right">
+					<li><a href="#portfolio">Log In</a></li>
+					<li><a href="#contact">Sign Up</a></li>
+					</span>
+				</ul>
+			</nav>
+
+<!-- Work -->
+<div class="wrapper">
+	<div class="container" id="searchbox">
+		<div class='row'>
+			<div class="8u 12u(mobile)  style2 videodescription" id='vidplayer'>
+				<!-- VIDEO ********************** -->
+				<video id="myvideo" width="100%" controls>
+					<source src="./assets/video.mp4" type="video/mp4"></source>
+					Your browser does not support HTML5 video.</video>
+					<!-- /VIDEO -->
+					<h2> The Science of Dreams 
+				<!-- 	<button id="playme"><span  class='fa fa-play'></span></button> --></h2>
+
+			<div class="playernav">
+						<ul class="nav-tabs">
+							<li class="tab-item active">Description</a></li>
+							<li class="tab-item">Summary</a></li>
+							<li class="tab-item">Related</a></li>
+						</ul>
+				</div> 
+				<div id='item-gray'>{{saved[0].author}}: {{saved[0].views}} - {{saved[0].date}} </div>
+				<div class='item-desc'> {{saved[0].description }}  </div>
+				</div>
+				<div class="4u 12u(mobile) style2">
+					Search:
+					<form id='mainForm' name="search" ng-submit="ajaxsearch()">	<input list='videos' ng-model="formkey" type='text' name="keys" id="keys" placeholder="Keywords.."/><datalist id="videos">
+							<option ng-repeat="f in saved[hashtags]" value="{{f}}"></option>
+						</datalist> 
+						</form>
+<!-- 
+					<form id='mainForm' name="search" onsubmit="ajaxsearch()">	<input list='videos' ng-model="keywords" type='text' name="keys" id="keys" placeholder="Keywords.."/><datalist id="videos">
+							<option ng-repeat="f in saved[hashtags]" value="{{f}}"></option>
+						</datalist> 
+						</form> -->
+
+						<div class='hashes'>
+					<span ng-repeat="h in saved[0].hashtags" class='item-hash'>{{h}} </span></div>
+
+					<div ng-repeat="key in keywords.data" class="keyword-item row style2">
+					<div class='4u 12u(mobile) keyword-time' id='item-gray'>
+					<img src='images/videothumbnail-default.png' class="jump" data-time="{{key.time}}" onclick="clickme(this.getAttribute('data-time'))"/></div>
+					<div class='8u 12u(mobile)' id='keywordstring'> {{key.string}}</div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Contact -->
+	<div class="wrapper style4">
+		<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="12u">
+						<section class="contact">
+							<a href="https://github.com/rivukhoda/clari-drobe" class="icon fa fa-github"></a>
+
+
+							<p>&copy;  2016 <a href="" target="_blank">Marvin Wu, Rivu Khoda, Jennifer Shen, Stanley Su</a>.</p></section>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- Scripts -->
+
+
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+	</html>

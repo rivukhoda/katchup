@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html ng-app="Main">
+	<head>
+		<title>KatchUP McHacks 2016</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
+	</head>
+
+<body ng-controller="myCtrl" class="homepage">
+
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+				<a href="./index.html" id='logo3'><img src='./assets/logo-katchup.png' id='logo'/></a>
+				<span class="left"><li><a href="./uploadmenu.html">Upload</a></li></span>
+				
+					<li><a href="./videomenu.html">Discover</a></li>
+					<li><a href="#footer">About Us</a></li><span class='mainnav'>
+				</span>
+					<span class="right">
+					<li><a href="#portfolio">Log In</a></li>
+					<li><a href="#contact">Sign Up</a></li>
+					</span>
+				</ul>
+			</nav>
+
+
+
+		<!-- Home -->
+			<div class="wrapper style1 first">
+				<article class="container" id="top">
+					<div class="row">
+						<div class="12u 12u(mobile) front-half">
+							<header>
+								<h1>What would you like to learn about ?</h1>
+								<form id='mainForm' action='videomenu.html' name="myForm" onsubmit="return validateForm()" method="post">	<input list='videos' ng-model="videoinput" type='text' name="videoname" id="videofront" placeholder="Subject.."/><datalist id="videos">
+  <option value="COMP 202">
+  <option value="COMP 202 McGill">
+  <option value="Dreams">
+</datalist> 
+
+<button class='submit' id='submit-front'> 
+				<img src='./assets/logo-katchup.png' id='logo2'/></button> 
+  </form>
+							<p id='frontp'>KatchUP builds an easily readable database of notes and summaries for your videos.</p>
+							</header>
+							
+						</div>
+					</div>
+				</article>
+			</div>
+
+		<!-- Portfolio -->
+			<div class="wrapper style3">
+				<article id="portfolio">
+					<header>
+						<h2>Trending</h2>
+					</header>
+					<div class="container">
+
+						<div class="row">
+							<div class="4u 12u(mobile)">
+								<article class="box style2">
+									<a href="#" class="image featured"><img src="images/salesvideo-default.jpg" alt="" /></a>
+									<h3><a href='videoplayer.html'>{{saved[0].title}}</a></h3>
+									<div id='item-gray'>{{saved[0].author}}</div>
+									<div class='item-desc'> {{saved[0].description }} </div>
+								</article>
+							</div>
+							<div class="4u 12u(mobile)">
+								<article class="box style2">
+									<a href="#" class="image featured"><img src="images/drawingvideo-default.jpg" alt="" /></a>
+									<h3><a href='videoplayer.html'>{{saved[1].title}}</a></h3>
+									<div id='item-gray'>{{saved[1].author}}</div>
+									<div class='item-desc'> {{saved[1].description }} </div>
+								</article>
+							</div>
+							<div class="4u 12u(mobile)">
+								<article class="box style2">
+									<a href="#" class="image featured"><img src="images/designvideo-default.jpg" alt="" /></a>
+									<h3><a href='videoplayer.html'>{{saved[2].title}}</a></h3>
+									<div id='item-gray'>{{saved[2].author}}</div>
+									<div class='item-desc'> {{saved[2].description }} </div>
+								</article>
+							</div>
+						</div>
+					</div>
+					<footer>
+						<!-- <a href="#contact" class="button big scrolly">Get in touch with me</a> -->
+					</footer>
+				</article>
+			</div>
+
+		<!-- Contact -->
+			<div class="wrapper style4">
+	<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="12u">
+						<section class="contact">
+						<a href="https://github.com/rivukhoda/clari-drobe" class="icon fa fa-github"></a>
+
+
+									<p>&copy;  2016 <a href="" target="_blank">Marvin Wu, Rivu Khoda, Jennifer Shen, Stanley Su</a>.</p></section>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/skel-viewport.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

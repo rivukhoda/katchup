@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html ng-app="Main">
+	<head>
+		<title>KatchUP McHacks 2016</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
+	</head>
+
+<body ng-controller="myCtrl" class="homepage">
+
+<nav id='nav'><ul class='container'>
+				<span class='left'><li><a href='./index.html'>Home</a></li></span>
+				<span class='mainnav'>
+					<li><a href='./videomenu.html'>Discover</a></li>
+					<li><a href='#footer'>About Us</a></li>
+				</span>
+					<span class='right'>
+					<li><a href='#portfolio'>Log In</a></li>
+					<li><a href='#contact'>Sign Up</a></li>
+					</span>
+				</ul>
+			</nav>
+	
+		<!-- Work -->
+			<div class="wrapper style3">
+			<div class="container box style2" id="searchbox">
+					<header>
+						<form id='mainForm' action='videomenu.html' name="myForm" onsubmit="return validateForm()" method="post">	<input list='videos' ng-model="videoinput" type='text' name="videoname" id="videoname" placeholder="Subject.." /><datalist id="videos">
+							<option ng-repeat="f in saved" value="{{f.title}}"></option>
+						</datalist> 
+						</form>
+					</header>
+
+					<div class="row" ng-repeat="s in saved"  ng-show="'{{s.title}}'.indexOf(videoinput) >= 0" >
+					<div class="4u 12u(mobile)"><img src="http://placehold.it/350x250" /></div>
+						<div class="8u 12u(mobile)">
+								<h3>{{s.title}}</h3>
+								<h2>{{s.author}}</h2>
+								<p> {{s.views}} - {{s.date}} </p>
+								<p> {{s.description }} </p>
+								<span ng-repeat="h in s.hashtags">{{h}} </span>
+								</div>
+							</div>
+			</div>
+
+	
+		<!-- Contact -->
+			<div class="wrapper style4">
+	<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="12u">
+						<section class="contact">
+						<a href="https://github.com/rivukhoda/clari-drobe" class="icon fa fa-github"></a>
+
+
+									<p>&copy;  2016 <a href="" target="_blank">Marvin Wu, Rivu Khoda, Jennifer Shen, Stanley Su</a>.</p></section>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/skel-viewport.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
