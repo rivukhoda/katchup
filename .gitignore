@@ -2,7 +2,9 @@
 ..
 .DS_Store
 data/
-backend/uploads/
-backend/audio/
-backend/temp/
+server/uploads/
+server/audio/
+server/temp/
 results/
+server/venv/
+client/
