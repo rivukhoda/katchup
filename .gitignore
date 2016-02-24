@@ -8,3 +8,5 @@ server/temp/
 results/
 server/venv/
 client/
+*.pyc
+client/assets/video.mp4

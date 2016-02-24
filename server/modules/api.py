@@ -8,6 +8,7 @@ from werkzeug import secure_filename
 
 app = Flask(__name__)
 
+#Test Route
 @app.route('/')
 def hello_world():
     return 'Hello World!'
@@ -19,6 +20,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['AUDIO_FOLDER'] = AUDIO_FOLDER
 app.config['TEMP_FOLDER'] = TEMP_FOLDER
 
+#Upload Requests
 @app.route('/upload', methods=['POST'])
 def upload_file():
 	file = request.files['video']
@@ -35,10 +37,13 @@ def upload_file():
 		
 	return redirect(url_for('uploaded_file', filename=filename))
 
+#Video Requests
 @app.route('/uploads/<filename>')
+@cors.crossdomain(origin='*')
 def uploaded_file(filename):
 	return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
+#Search Requests
 @app.route('/search', methods=['GET'])
 @cors.crossdomain(origin='*')
 def search_query():
