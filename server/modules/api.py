@@ -10,6 +10,7 @@ app = Flask(__name__)
 
 #Test Route
 @app.route('/')
+@cors.crossdomain(origin='*')
 def hello_world():
     return 'Hello World!'
 

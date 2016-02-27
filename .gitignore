@@ -2,6 +2,6 @@
 ..
 .DS_Store
 data/
-server/venv/
+server/env/
 *.pyc
 client/assets/video.mp4
